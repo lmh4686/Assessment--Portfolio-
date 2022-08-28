@@ -1,0 +1,156 @@
+/* whole document, body setting */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Trebuchet MS', sans-serif;
+    text-decoration: none;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background: url('img/main-background.jpg') no-repeat center; 
+    background-size: cover;
+    backdrop-filter: blur(3px);
+}
+
+/* Header styling */
+header {
+    display: flex; 
+    flex-wrap: wrap;
+    align-items: center;    
+    border-bottom: 0.1rem solid white;
+    background: rgb(13, 13, 13);
+} 
+
+.logo {
+    height: 2rem;
+    margin: 0.5rem 1rem 0 0.5rem;
+}
+
+.banner {
+    color: white;
+    font-size: 1.2rem;
+}
+
+/* nav styling */
+nav {
+    display: flex;
+    align-self: flex-end;
+    margin-left: auto;
+    flex-wrap: wrap;
+}
+
+nav a { 
+    font-size: 1rem;
+    color: white;
+    margin-right: 1rem;
+} 
+
+/* nav link hover effect */
+header a {
+    transition: ease-in-out 0.3s;
+}
+header a:hover {
+    color: gray;
+}
+
+/* main positioning, styling */
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 70vh;
+
+    padding-left: 0.5rem;
+}
+
+/* main h1 and p font styling */
+
+section h1 {
+    font-size: 2.3rem;
+    color: white;
+}
+
+section p {
+    font-size: 1.8rem;
+    color: #FFCC66;
+    margin-top: 5rem;
+}
+
+section h1, section p {
+    text-shadow: 2px 2px 2px black;
+}
+
+/* article, images styling */
+article {
+    display: flex;
+}
+
+article section {
+    padding-bottom: 3vh;
+    text-align: center;
+    background-color: #003049;
+    width: 100%;
+}
+
+article section img {
+    height: 25vh;
+    width: 100%;
+    object-fit: cover;
+    transition: .3s ease-in-out;
+    padding-bottom: 0.25rem;
+}
+
+article section a {
+    font-size: 1.1rem;
+    color: white;
+    transition: .3s ease-in-out;
+}
+
+article section a:hover {
+    color: gray;
+}
+
+article section img:hover {
+    padding: 0.6rem;
+}
+
+/* footer */
+footer {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(13, 13, 13);
+    border-top: 0.1rem solid ;
+    font-size: 1.2rem;
+    color: white;
+}
+
+/* tablet view */
+@media only screen and (min-width:450px) {
+    .banner {
+        font-size: 1.5rem;
+    }
+    nav a {
+        margin-bottom: 00.3rem;
+    }
+
+}
+/* labtop, desk top view */
+@media only screen and (min-width:900px) {
+    nav a {
+        font-size: 1.1rem;
+    }
+
+    article section a {
+        font-size: 1.5rem;
+    }
+
+    article section img {
+        height: 30vh;
+    }
+}
+

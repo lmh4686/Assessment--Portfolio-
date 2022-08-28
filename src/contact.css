@@ -1,0 +1,187 @@
+/* whole document, body setting */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Trebuchet MS', sans-serif;
+    text-decoration: none;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header styling */
+header {
+    display: flex; 
+    flex-wrap: wrap;
+    align-items: center;    
+    border-bottom: 0.1rem solid white;
+    background: rgb(13, 13, 13);
+} 
+
+.logo {
+    height: 2rem;
+    margin: 0.5rem 1rem 0 0.5rem;
+}
+
+.banner {
+    color: white;
+    font-size: 1.2rem;
+}
+
+/* nav styling */
+nav {
+    display: flex;
+    align-self: flex-end;
+    margin-left: auto;
+    flex-wrap: wrap;
+}
+
+nav a { 
+    font-size: 1rem;
+    color: white;
+    margin-right: 1rem;
+} 
+
+/* link hover effect */
+header a {
+    transition: ease-in-out 0.3s;
+}
+header a:hover {
+    color: gray;
+}
+
+/* main contents */
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    background: url(img/contact-background.jpg) center no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+h1 {
+    text-align: center;
+    color: #FFCC66;
+    text-shadow: 2px 2px 2px black;
+}
+
+/* main container */
+main>article {
+    background-color: #FFCC66;
+    opacity: .95;
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+    border-radius: 2%;
+}
+
+/* main article text, img */
+main>article {
+    font-size:0.9rem;
+    font-weight: 600;
+    width: 90%;
+    align-self: center;
+}
+
+p>img {
+    width: 3rem;
+    margin: 0.5rem;
+}
+
+article>p {
+    border-bottom: 1px dashed black;
+    display: flex;
+    align-items: center;
+}
+
+/* logo section */
+article>article {
+    display: flex;
+    justify-content: space-around;
+}
+
+
+#git, #linke {
+    width: 3rem;
+    margin: 1rem 0;
+}
+
+section a:hover {
+    animation: flash 1.3s infinite;
+}
+
+@keyframes flash {
+    0% {
+        opacity: .2;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* footer */
+footer {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(13, 13, 13);
+    border-top: 0.1rem solid ;
+    font-size: 1.2rem;
+    color: white;
+}
+
+/* tablet view */
+@media only screen and (min-width:500px) {
+    main>article {
+        width: 50%;
+        margin-bottom: 20%;
+    }
+}
+
+/* labtop view */
+@media only screen and (min-width:1000px) {
+    
+    h1 {
+        font-size: 2.3rem;
+    }
+    
+    main>article {
+        width: 35%;
+        margin-bottom: 10%;
+    }
+
+    article>p {
+        font-size: 1.2rem;
+    }
+}
+
+/* Desktop view */
+@media only screen and (min-width:2000px) {
+       
+    main>article {
+        width: 30%;
+        margin-bottom: 10%;
+    }
+
+    article>p {
+        font-size: 1.2rem;
+    }
+
+}
+
+/* header adjustment */
+@media only screen and (min-width:450px) {
+    .banner {
+        font-size: 1.5rem;
+    }
+    nav a {
+        margin-bottom: 00.3rem;
+    }
+}
+
+@media only screen and (min-width:900px) {
+    nav a {
+        font-size: 1.1rem;
+    }
+}
